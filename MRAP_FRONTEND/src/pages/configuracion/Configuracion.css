@@ -1,0 +1,651 @@
+/* ========================== Variables Base ========================== */
+:root {
+  --color-bg-light: #F9F9F9;
+  --color-bg-dark: #282828;
+  --color-text-light: #000000;
+  --color-text-dark: #cdcdcd;
+  --primary-color-light: #b7b7b7;
+  --primary-color-dark: #091626;
+  --divider-color-light: #000000;
+  --divider-color-dark: #ffffff;
+  --selected-row-bg-light: #ffffff; 
+  --selected-row-text-light: #000000;
+
+  --hover-row-bg: #56a8ff65; 
+  --hover-row-bg-light: #ffffff33; 
+  --selected-row-bg-dark: #333333;
+  --selected-row-text-dark: #ffffff;
+  --hover-row-bg-dark: #3f3f3f; 
+  --pagination-bg-color-light: #ffffff;
+  --pagination-bg-color-dark: #282828;
+  --table-header-bg-color-light: #ffffff;
+  --table-text-color-light: #000000;
+  --table-border-color-light: #cccccc;
+  --table-header-bg-color-dark: #000000;
+  --table-text-color-dark: #ffffff;
+  --table-border-color-dark: #b3b3b3;
+
+  --button-bg-light: #275B92; /* Color de fondo para el modo claro */
+  --button-bg-dark: #000000; /* Color de fondo para el modo oscuro */
+  --button-text-light: #ffffff; /* Color del texto para el modo claro */
+  --button-text-dark: #ffffff; /* Color del texto para el modo oscuro */
+  --button-bg: var(--button-bg-light); /* Valor por defecto */
+  --button-text: var(--button-text-light); /* Valor por defecto */
+}
+
+/* ========================== Modos de Color ========================== */
+body.light-mode {
+  --color-bg: var(--color-bg-light);
+  --color-text: var(--color-text-light);
+  --primary-color: var(--primary-color-light);
+  --divider-color: var(--divider-color-light);
+  --selected-row-bg: var(--selected-row-bg-light);
+  --selected-row-text: var(--selected-row-text-light);
+  --hover-row-bg: var(--hover-row-bg-light);
+  --pagination-bg-color: var(--pagination-bg-color-light);
+}
+
+body.dark-mode {
+  --color-bg: var(--color-bg-dark);
+  --color-text: var(--color-text-dark);
+  --primary-color: var(--primary-color-dark);
+  --divider-color: var(--divider-color-dark);
+  --selected-row-bg: var(--selected-row-bg-dark);
+  --selected-row-text: var(--selected-row-text-dark);
+  --hover-row-bg: var(--hover-row-bg-dark);
+  --pagination-bg-color: var(--pagination-bg-color-dark);
+}
+
+/* ========================== Estilos Generales ========================== */
+body {
+  transition: background-color 0.3s, color 0.3s;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+}
+
+/* ========================== Contenedores ========================== */
+.fullScreen, 
+.container-configuracion, 
+.seccion, 
+.ant-table-thead > tr > th, 
+.ant-table-tbody > tr > td, 
+.ant-table-title, 
+.ant-table-tfoot > tr > td, 
+.tabla .ant-table-tbody > tr > td, 
+.tabla .ant-table-thead > tr > th {
+  background-color: var(--color-bg); 
+  color: var(--color-text);
+  
+}
+
+.container-configuracion {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+  padding: 30px;
+  row-gap: 15px;
+  overflow-y: auto; /* Agregar barra de desplazamiento vertical */
+  overflow-x: hidden; /* Ocultar barra de desplazamiento horizontal, si no es necesaria */
+  
+}
+
+.seccion {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 67%;
+  border: 1px solid transparent;     /* COLOR DEL BORDE DE LOS CONTENEDORES */
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  border-radius: 5px;
+  margin: 5px;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+}
+
+.seccion-contenido {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 65%;
+  flex-wrap: wrap;
+  row-gap: 20px;
+  column-gap: 20px;
+  padding: 30px;
+}
+
+/* ========================== Botones y Dividers ========================== */
+.botonAnt {
+  width: 200px;
+  background-color: var(--primary-color);
+  color: var(--color-text);
+  border-radius: 5px;
+}
+
+.dividerAnt {
+  border-color: var(--primary-color);
+  font-size: 20px;
+}
+
+.boton-sin-estilo.ant-btn {
+  background-color: #ffffff !important; /* Cambia este color por el que prefieras */
+  color: #000000 !important; /* Color del icono o texto */
+  border: none !important; /* Elimina el borde del botón */
+  border-radius: 4px; /* Bordes redondeados */
+  padding: 8px 12px; /* Tamaño del botón */
+  transition: background-color 0.3s; /* Suaviza el cambio de color */
+}
+
+.boton-sin-estilo.ant-btn:hover {
+  background-color: #a9a9a9 !important; /* Color al pasar el mouse */
+}
+
+
+
+/* ========================== Tablas ========================== */
+.container-table {
+  width: 90%;
+  min-height: 80vh;
+  position: relative;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+  
+}
+
+/* tablas de Analisis */
+.tabla{ 
+  position: relative;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.container-operaciones {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Hover y filas seleccionadas en tablas */
+.ant-table-tbody > tr:hover > td {
+  background-color: var(--hover-row-bg);
+}
+
+.ant-table-tbody > tr.ant-table-row-selected > td {
+  background-color: var(--selected-row-bg);
+  color: var(--selected-row-text);
+}
+
+/* Estilos de tablas */
+.ant-table-thead > tr > th {
+  background-color: var(--table-header-bg-color-light);
+  color: var(--table-text-color-light);
+  border-bottom: 1px solid var(--table-border-color-light);
+}
+
+.dark-mode .ant-table-thead > tr > th, .dark-mode .ant-table-cell, 
+.dark-mode .ant-table-tfoot > tr > td {
+  background-color: var(--table-header-bg-color-dark);
+  color: var(--table-text-color-dark);
+  border-color: var(--table-border-color-dark);
+}
+
+.ant-table-title,
+.ant-table-thead > tr > th {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  border-bottom: 1px solid var(--color-text);
+}
+
+.ant-table-tbody > tr:hover > td {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* ========================== Modo Oscuro - Títulos de las columnas ========================== */
+body.dark-mode .ant-table-thead > tr > th {
+  background-color: #333333 !important;/* Fondo oscuro para los títulos de las columnas */
+  color: #ffffff; /* Texto blanco para los títulos de las columnas */
+}
+
+/* ========================== Modo Oscuro - Fila Normal ========================== */
+body.dark-mode .ant-table-tbody > tr > td {
+  background-color: #282828 !important; /* Fondo oscuro para las filas normales */
+  color: #b6b6b6 !important; /* Texto blanco en las filas normales */
+}
+
+/* ========================== Hover en las Celdas de Acciones ========================== */
+/* HOVER SELECTED */
+.ant-table-tbody > tr.ant-table-row:hover > td {
+  background-color: var(--hover-row-bg) !important; /* Color de fondo al pasar el mouse */
+}
+
+
+/* ========================== Sombras ========================== */
+body.dark-mode .seccion, 
+body.dark-mode .container-table, 
+body.dark-mode .ant-table {
+  box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 4px;
+}
+
+/* ========================== Paginación ========================== */
+.light-mode .ant-pagination, .light-mode .ant-pagination-item, .light-mode .ant-pagination-item-active, 
+.light-mode .ant-pagination-next, .light-mode .ant-pagination-prev {
+  color: var(--table-text-color-light);
+  border-color: var(--table-border-color-light);
+}
+
+.dark-mode .ant-pagination, .dark-mode .ant-pagination-item, .dark-mode .ant-pagination-item-active, 
+.dark-mode .ant-pagination-next, .dark-mode .ant-pagination-prev {
+  color: var(--table-text-color-dark);
+  border-color: var(--table-border-color-dark);
+}
+
+
+
+/* ========================== Footer ========================== */
+body.dark-mode .ant-table-footer {
+  background-color: var(--color-bg-dark);
+  color: var(--color-text-dark);
+}
+
+body.light-mode .ant-table-footer {
+  background-color: var(--color-bg-light);
+  color: var(--color-text-dark);
+}
+
+/* ========================== Estilos para el modo oscuro ========================== */
+.table-dark {
+  background-color: #333;
+  color: #000000;
+}
+
+.table-dark th, .table-dark td {
+  background-color: #080808;
+  color: #080808;
+  border-color:#080808;
+}
+
+.button-create-dark {
+  background-color: #555;
+  color: #080808;
+}
+
+.ant-table-cell {
+  background-color: #080808;
+}
+
+.tabla .ant-table {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  border-color: var(--color-text);
+}
+
+.tabla .ant-table-tbody > tr:nth-child(odd),
+.tabla .ant-table-tbody > tr:nth-child(even) {
+  background-color: var(--color-text);
+}
+
+.tabla .ant-table-thead > tr > th {
+  background-color: var(--table-header-bg-color);
+  color: var(--table-text-color);
+}
+
+.ant-table-tfoot > tr > td {
+  background-color: var(--table-header-bg-color);
+  color: var(--table-text-color);
+  border-color: var(--table-border-color);
+}
+
+/* ================================ Elementos de Detalles  ======================================================== */
+
+.custom-descriptions {
+  width: 60%;
+  margin-left: 16px;
+  margin-right: 16px;
+  background-color: gray;
+  border: 1px solid var(--divider-color); /* Ajusta el color según el modo */
+  border-radius: 4px; /* Ajusta según tu preferencia */
+  padding: 16px; /* Ajusta según tu preferencia */
+  
+}
+
+.custom-descriptions .ant-descriptions-item-label,
+.custom-descriptions .ant-descriptions-item-content {
+  color: var(--color-text); /* Usa las variables según el modo */
+  background-color: var(--color-bg);
+  
+}
+
+body.dark-mode .custom-descriptions {
+  background-color: #333; /* Fondo oscuro para el modo oscuro */
+  border-color: var(--divider-color-dark);
+}
+
+body.light-mode .custom-descriptions {
+  background-color: #f9f9f9; /* Fondo claro para el modo claro */
+  border-color: var(--divider-color-light);
+}
+
+.descriptions-container{
+  width: 60%;  /* Hacerlo flexible con el ancho de la pantalla */
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #ffffff;
+  padding: 16px;
+}
+
+/* archivo CSS - DETALLE EN MODO OSCURO */
+.dark-mode .descriptions-container {
+  width: 60%;  /* Hacerlo flexible con el ancho de la pantalla */
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #b7b7b7;
+  padding: 16px;
+}
+
+
+/* Estilo para los elementos generales del detalle-detallegeneral */
+.detalle-general {
+  width: 80%; /* Ancho flexible */
+  margin-top: 16px; /* Margen superior */
+  background-color: #ffffff; /* Fondo blanco */
+  padding: 16px;
+  border-radius: 8px; /* Bordes redondeados */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+
+/* Contenedor principal */
+.detalle-elemento-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra */
+  width: 80%;
+  margin: auto;
+}
+
+/* Estilo para el menú horizontal */
+.detalle-elemento-menu {
+  margin-bottom: 20px;
+}
+
+/* Estilos para la sección de DetalleGeneral */
+.detalle-general {
+  width: 100%;
+  padding: 20px;
+  background-color: rgb(255, 0, 0);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 16px;
+}
+
+/* Estilo para el contenedor de DataGrid */
+/* Modo Claro (Light Mode) */
+body.light-mode .data-grid-container {
+  width: 100%;
+  margin-top: 16px;
+  background-color: #ffffff; /* Fondo blanco */
+  padding: 16px;
+  border-radius: 8px;
+  color: #333; /* Texto oscuro */
+  border: 1px solid #ddd; /* Borde sutil */
+}
+
+/* Modo Oscuro (Dark Mode) */
+body.dark-mode .data-grid-container {
+  width: 100%;
+  margin-top: 16px;
+  background-color: #000000 !important; /* Fondo oscuro */
+  padding: 16px;
+  border-radius: 8px;
+  color: #fff; /* Texto blanco */
+  border: 1px solid #444; /* Borde oscuro */
+}
+
+/* Estilo para los títulos de secciones (Alarmas, Controles, etc.) */
+.seccion-titulo {
+  font-size: 24px;
+  color: #6c6c6c;
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Modo Oscuro (Dark Mode) */
+
+body.dark-mode .detalle-elemento-menu {
+  background-color: #848484; /* Fondo oscuro para el menú */
+  color: #fff !important; /* Texto claro para el menú */
+}
+
+body.dark-mode .detalle-general {
+  background-color: #4a4a4a; /* Fondo más oscuro */
+  color: #fff !important; /* Texto blanco */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada */
+}
+
+
+body.dark-mode .seccion-titulo {
+  color: #fff !important; /* Texto blanco */
+}
+
+body.dark-mode .tabla .ant-pagination, 
+body.dark-mode .tabla .ant-pagination-item, 
+body.dark-mode .tabla .ant-pagination-item-active, 
+body.dark-mode .tabla .ant-pagination-next, 
+body.dark-mode .tabla .ant-pagination-prev {
+  background-color: var(--pagination-bg-color-dark) !important; /* Modo oscuro */
+  color: var(--table-text-color-dark) !important;
+  border-color: var(--table-border-color-dark) !important;
+}
+
+/* ================================ Botones de Inicio  ======================================================== */
+
+/* Aplicar estilo general a los enlaces navlink */
+.navlink {
+    text-decoration: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease; /* Suavizar la transición */
+}
+
+/* Efecto al pasar el cursor (hover) */
+.navlink:hover {
+    transform: scale(1.4); /* Aumentar ligeramente el tamaño */
+}
+
+/* Efecto para simular que el botón está seleccionado */
+.navlink:active {
+    transform: scale(0.95); /* Reducir ligeramente el tamaño */
+    
+}
+
+/* Estilos para los botones en modo claro */
+.navlink {
+  color: #606060; /* Texto oscuro en modo claro */
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* ================================ Botones de Monitoreo ======================================================== */
+.high-priority {
+  color: #ff0000 !important; /*COLOR DE LA FONT*/
+  border-radius: 15px;
+  padding: 10px 20px;
+  border: none;
+  background: linear-gradient(90deg, #fa8c8a 8%, #ffffff 8%) !important; /* Mitad del botón pintado y color del mismo */
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.medium-priority {
+  color: #ffae00 !important;
+  border-radius: 15px;
+  padding: 10px 20px; 
+  border: none;
+  background: linear-gradient(90deg, #ffd089 8%, #ffffff 8%) !important; /* Mitad del botón pintado */
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.low-priority {
+  color: #d5bf50 !important;
+  border-radius: 15px;
+  padding: 10px 20px;
+  border: none;
+  background: linear-gradient(90deg, #fbed75 8%, #ffffff 8%) !important; /* Mitad del botón pintado */
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.priority-button {
+  margin: 5px;
+  border: 1px solid #c6c6c6;
+ 
+  color: #333;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+.priority-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.2); /* Sombra más intensa en hover */
+  transform: translateY(-2px); /* Efecto de elevar ligeramente al hacer hover */
+}
+
+.priority-button:active {
+  transform: scale(0.95);
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15); /* Sombra más ligera al hacer clic */
+  transform: translateY(1px); /* Efecto de presionar */
+}
+
+.button-number {
+  font-weight: bold;
+  font-size: 18px;
+  color: #000000 !important;
+  margin-top: 5px;
+}
+
+
+/* ================================ Navbar ======================================================== */
+/* Navbar para el modo claro */
+.navbarContainer {
+  color: #fff; /* Aseguramos que el texto sea blanco siempre */
+}
+
+/* Modo oscuro */
+body.dark-mode .navbarContainer {
+  background-color: #121212; /* Fondo oscuro */
+  color: #fff; /* Aseguramos que el texto sea blanco en el modo oscuro */
+}
+
+/* Estilo de los íconos en modo oscuro (si los usas) */
+body.dark-mode .ant-menu-item, 
+body.dark-mode .ant-menu-submenu-title {
+  color: #fff !important; /* Asegura que los íconos y texto sean blancos */
+}
+
+/* Si el menú está seleccionado, mantiene el texto blanco */
+body.dark-mode .ant-menu-item-selected {
+  color: #fff !important;
+}
+
+
+body.light-mode {
+  --button-bg: var(--button-bg-light);
+  --button-text: var(--button-text-light);
+}
+
+body.dark-mode {
+  --button-bg: var(--button-bg-dark);
+  --button-text: var(--button-text-dark);
+}
+
+.botonAnt {
+  background-color: var(--button-bg) !important;
+  color: var(--button-text) !important;
+  border: none; /* Si no quieres borde, puedes removerlo */
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s; /* Transiciones suaves */
+}
+
+.botonAnt:hover {
+  opacity: 0.8; /* Efecto al pasar el cursor */
+}
+
+body.light-mode {
+  --button-bg: var(--button-bg-light);
+  --button-text: var(--button-text-light);
+}
+
+body.dark-mode {
+  --button-bg: var(--button-bg-dark);
+  --button-text: var(--button-text-dark);
+}
+
+.botonAnt {
+  background-color: var(--button-bg);
+  color: var(--button-text);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+
+}
+
+.botonAnt:hover {
+  opacity: 0.8;
+}
+
+/* ================================ Bombas ======================================================== */
+
+
+/* DetalleBomba.css */
+
+.detalle-bomba-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.detalle-bomba-content {
+  width: 90%;
+  max-width: 1000px;
+  background-color: var(--color-bg);
+  padding: 20px;
+  border-radius: 8px;
+box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+/* UsosBomba.css */
+
+.usos-bomba-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: var(--color-bg);
+  padding: 20px;
+}
+
+.usos-bomba-content {
+  width: 80%;
+  max-width: 800px;
+  background-color: var(--color-bg);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+

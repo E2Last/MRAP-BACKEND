@@ -1,0 +1,25 @@
+
+.container-controles {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    padding: 30px;
+    row-gap: 15px;
+    overflow-y: auto; /* Agregar barra de desplazamiento vertical */
+    overflow-x: hidden; /* Ocultar barra de desplazamiento horizontal, si no es necesaria */
+    
+}
+
+.footer-controles{
+    position: relative; /* Posiciona relativo al contenedor de la tabla */
+    display: flex;
+    justify-content: flex-end; /* Alinea los botones hacia la derecha */
+    padding: 10px; /* Espaciado interno */
+}
+
+/* .container-operaciones{
+
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+} */

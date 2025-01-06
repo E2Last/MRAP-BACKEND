@@ -1,0 +1,51 @@
+.form-pozo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.title-form-pozo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+}
+
+.container-inputs {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    /*border: 1px solid black;*/
+}
+
+.container-inputs>* {
+    margin-top: 10px;
+}
+
+input {
+    border-color: #4caf50;
+    /* Cambia el color del borde */
+    border-radius: 8px;
+    /* Bordes redondeados */
+    padding: 12px;
+    /* Ajusta el padding para un input más grande */
+    font-size: 18px;
+    /* Aumenta el tamaño de fuente para coincidir con el tamaño grande */
+}
+
+input:focus {
+    border-color: #2e7d32;
+    /* Color del borde al enfocar */
+    box-shadow: 0 0 8px rgba(46, 125, 50, 0.5);
+    /* Sombra alrededor del input al enfocarlo */
+}
+
+.input::placeholder {
+    color: #a9a9a9;
+    /* Cambia el color del placeholder */
+    font-style: italic;
+    /* Cambia el estilo del placeholder */
+}

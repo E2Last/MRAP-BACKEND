@@ -1,0 +1,11 @@
+.container-inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 400px;
+    margin: auto;
+}
+
+.input-ant {
+    width: 100%;
+}

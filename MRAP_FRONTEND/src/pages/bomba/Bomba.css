@@ -1,0 +1,29 @@
+.fullScreenBomba {
+    width: 100%;
+    height: 100vh;
+    position: fixed; /* Para asegurar que siempre esté anclado a la pantalla */
+    top: 0;
+    left: 0;
+    overflow-y: auto; /* Agregar barra de desplazamiento vertical */
+    overflow-x: hidden; /* Ocultar barra de desplazamiento horizontal, si no es necesaria */
+}
+
+.container-bomba {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 10px;
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 10px;
+}
+
+.row-counter {
+    margin-top: 10px;
+    font-size: 14px;
+}

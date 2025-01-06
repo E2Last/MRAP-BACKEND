@@ -1,0 +1,24 @@
+/* Gravedad.css */
+.gravedad-section {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #d9d9d9;
+    border-radius: 8px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.gravedad-options {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.gravedad-tag {
+    font-size: 14px;
+    padding: 5px 15px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}

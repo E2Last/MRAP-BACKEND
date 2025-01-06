@@ -1,0 +1,28 @@
+.container-operaciones {
+    display: flex;
+    flex-direction: row;
+}
+
+.container-operaciones > * {
+    margin: 2px
+}
+
+.boton-sin-estilo {
+    background: none;        /* Sin fondo */
+    border: none;           /* Sin borde */
+    color: inherit;         /* Heredar el color del texto */
+    padding: 0;             /* Sin padding */
+    font: inherit;          /* Heredar la fuente */
+    cursor: pointer;        /* Mantener el cursor de puntero */
+    text-decoration: none;   /* Sin subrayado */
+}
+
+.boton-create {
+    background-color: brown;
+}
+
+.footer {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}

@@ -1,0 +1,73 @@
+/* Cambiar el color de fondo de los clusters */
+.marker-cluster-small {
+    background-color: #275B92; 
+    width: 30px; /* Ancho */
+    height: 30px; /* Altura */
+    line-height: 30px; /* Altura de línea */
+    text-align: center; /* Alineación del texto */
+    border-radius: 15px; /* Esquinas redondeadas */
+    font-size: 12px; /* Tamaño del texto */
+    font-weight: bold; /* Grosor del texto */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Sombra */
+}
+
+.marker-cluster-medium {
+    background-color: #11375e; 
+    width: 30px; /* Ancho */
+    height: 30px; /* Altura */
+    line-height: 30px; /* Altura de línea */
+    text-align: center; /* Alineación del texto */
+    border-radius: 15px; /* Esquinas redondeadas */
+    font-size: 12px; /* Tamaño del texto */
+    font-weight: bold; /* Grosor del texto */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Sombra */
+}
+
+.marker-cluster-large {
+    background-color: #ff0000; 
+    width: 30px; /* Ancho */
+    height: 30px; /* Altura */
+    line-height: 30px; /* Altura de línea */
+    text-align: center; /* Alineación del texto */
+    border-radius: 15px; /* Esquinas redondeadas */
+    font-size: 12px; /* Tamaño del texto */
+    font-weight: bold; /* Grosor del texto */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Sombra */
+}
+
+/* Cambiar el color del texto dentro de los clusters */
+.marker-cluster div {
+    color: #ffffff; /* Blanco */
+}
+
+/* Cambiar el tamaño de los clusters */
+.marker-cluster {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 20px;
+}
+
+/* Ajustes adicionales para que los clusters se vean mejor */
+.marker-cluster span {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+
+
+/* Cambiar el tamaño de los clusters */
+.marker-cluster {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 20px;
+}
+
+/* Ajustes adicionales para que los clusters se vean mejor */
+.marker-cluster span {
+    font-size: 18px;
+    font-weight: bold;
+}

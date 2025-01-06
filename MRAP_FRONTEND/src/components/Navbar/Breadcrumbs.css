@@ -1,0 +1,26 @@
+/* Breadcrumbs.css */
+.breadcrumb-container {
+  font-size: 16px; /* Tamaño de la fuente de los Breadcrumbs */
+  margin: 10px 0;  /* Espaciado alrededor de los Breadcrumbs */
+
+}
+
+.breadcrumb-item {
+  color: #ffffff; /* Color del texto de cada ítem */
+  font-weight: bold; /* Texto en negrita */
+}
+
+.breadcrumb-item span {
+  font-size: 18px; /* Tamaño de la fuente de los textos dentro de los ítems */
+  padding-left: 5px; /* Espacio entre el icono y el texto */
+}
+
+.breadcrumb-item a {
+  text-decoration: none; /* Sin subrayado para los enlaces */
+  color: #1890ff; /* Color del enlace */
+}
+
+.breadcrumb-item a:hover {
+  text-decoration: underline; /* Subrayado al pasar el cursor */
+  color: #0056b3; /* Color del texto al pasar el cursor */
+}

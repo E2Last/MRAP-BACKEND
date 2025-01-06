@@ -1,0 +1,35 @@
+.fullScreenPozo {
+    width: 100%;
+    height: 100vh;
+    position: fixed; /* Para asegurar que siempre esté anclado a la pantalla */
+    top: 0;
+    left: 0;
+    overflow-y: auto; /* Agregar barra de desplazamiento vertical */
+    overflow-x: hidden; /* Ocultar barra de desplazamiento horizontal, si no es necesaria */
+}
+
+.container-pozo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 10px;
+}
+
+.progress-section {
+    margin: 20px auto;
+    padding: 20px;
+    border: 2px;
+    border-radius: 10px;
+    max-width: 1600px; /* Ajustar ancho máximo */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Añadir sombra */
+    text-align: center;
+}
+
+.progress-info {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+    font-size: 16px; /* Tamaño más grande */
+    font-weight: bold;
+}

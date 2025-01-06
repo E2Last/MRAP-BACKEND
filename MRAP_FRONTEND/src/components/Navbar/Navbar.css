@@ -1,0 +1,25 @@
+.navbarContainer{
+    font-size: 16px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    background-color: #275b92
+}
+
+/* background-color: #007bff; */
+
+/* Navbar.css */
+.navbarContainer .ant-menu-item-selected {
+    background-color: transparent !important; /* Eliminar el color de fondo */
+    color: inherit; /* Mantener el color de texto */
+    border-bottom: none !important; /* Eliminar el borde inferior */
+}
+
+
+.dark-text {
+    color: #ffffff;
+}
+
+.light-text {
+    color: #ffffff;
+}

@@ -1,0 +1,88 @@
+/* Estilos generales para el contenedor del gráfico */
+.chart-container {
+  width: 1000px;
+  height: 500px; /* Puedes ajustar la altura según tus necesidades */
+  max-width: 1200px;
+  margin: 0 auto; /* Centra el gráfico horizontalmente */
+  padding: 40px; /* Espaciado alrededor del gráfico */
+  background-color: #ffffff; /* Fondo claro para el contenedor */
+  border-radius: 8px; /* Bordes redondeados */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+/* Asegúrate de que el gráfico ocupe todo el ancho disponible */
+.chart-container canvas {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+/* Títulos y leyenda del gráfico */
+.chart-title {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Ajuste de la leyenda de Chart.js */
+.chartjs-legend {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.chartjs-legend li {
+  margin: 0 15px;
+  font-size: 14px;
+  color: #333;
+}
+
+/* Personalización de la tooltip del gráfico */
+.chartjs-tooltip {
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 10px;
+  border-radius: 4px;
+  font-size: 14px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo de los ejes del gráfico */
+.chartjs-axis-title {
+  font-size: 16px;
+  font-weight: bold;
+  color: #555;
+}
+
+.chartjs-ticks {
+  font-size: 12px;
+  color: #777;
+}
+/* Modal.css */
+.custom-modal .ant-modal {
+  width: 800px; /* Ajusta el tamaño como desees */
+}
+
+.custom-modal .ant-modal-content {
+  border-radius: 8px; /* Opcional: para bordes redondeados */
+}
+
+.chart-container {
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.filter-container {
+  margin-right: 20px;
+}
+
+.filter-container label {
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+#analysis-select {
+  padding: 5px;
+  font-size: 14px;
+}

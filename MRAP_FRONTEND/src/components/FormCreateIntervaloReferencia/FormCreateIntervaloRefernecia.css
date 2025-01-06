@@ -1,0 +1,33 @@
+/* Estilo específico para el Modal */
+.ant-modal-content {
+    width: auto;
+    max-width: 1200px; /* Opcional: ajusta el ancho máximo del modal */
+}
+
+.ant-modal-body {
+    padding: 24px; /* Agrega espacio alrededor del contenido */
+}
+
+.container-inputs-intervalo-referencia {
+    display: grid; /* Cambiar a grid para usar varias columnas */
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas */
+    gap: 16px; /* Espacio entre columnas */
+}
+
+.container-inputs .ant-form-item {
+    margin-bottom: 16px;
+}
+
+.container-inputs .ant-input, .container-inputs .ant-select-selector, .container-inputs .ant-checkbox-wrapper {
+    width: 100%;
+    white-space: nowrap; /* Evita que el texto se extienda en múltiples líneas */
+    overflow: hidden; /* Oculta el desbordamiento */
+    text-overflow: ellipsis; /* Añade puntos suspensivos para el texto desbordado */
+    max-width: 100%; /* Asegura que el contenido no exceda el tamaño del contenedor */
+}
+
+@media (max-width: 768px) {
+    .container-inputs {
+        grid-template-columns: 1fr; /* En pantallas más pequeñas, usa una sola columna */
+    }
+}

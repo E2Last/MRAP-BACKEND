@@ -1,0 +1,31 @@
+.fullScreenCopa {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+.container-copa{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 10px;
+}
+
+.footer {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px;
+}
+
+.footer-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.footer-buttons > .row-counter {
+    margin-top: 10px;
+    font-size: 14px;
+}

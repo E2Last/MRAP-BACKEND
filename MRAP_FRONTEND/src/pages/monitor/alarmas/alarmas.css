@@ -1,0 +1,22 @@
+
+.alarmas-page {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.alarmas-container {
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: var(--background-color);
+}
+
+.alarmas-footer {
+    text-align: right;
+    margin-top: 20px;
+    font-size: 16px;
+    color: var(--text-color);
+}
